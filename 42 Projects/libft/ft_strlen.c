@@ -6,7 +6,7 @@
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 19:53:07 by pshaw             #+#    #+#             */
-/*   Updated: 2022/07/04 19:10:20 by pshaw            ###   ########.fr       */
+/*   Updated: 2022/07/14 16:00:00 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*This function works out how long a string of characters is,*/
@@ -25,7 +25,7 @@ size_t	ft_strlen(const char *str)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_strlen("count me"));
+	printf("%i\n", ft_strlen("count me"));
 	return (0);
 }
 */

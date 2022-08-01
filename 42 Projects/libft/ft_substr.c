@@ -6,9 +6,11 @@
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 13:24:48 by pshaw             #+#    #+#             */
-/*   Updated: 2022/07/12 15:30:40 by pshaw            ###   ########.fr       */
+/*   Updated: 2022/07/29 16:01:57 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+//Uses malloc to return a substring from the string 's'. Substring begins
+//at index 'start' and is of max size 'len'.
 
 #include "libft.h"
 

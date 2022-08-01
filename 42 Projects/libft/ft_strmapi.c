@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 15:55:06 by pshaw             #+#    #+#             */
-/*   Updated: 2022/07/29 15:59:50 by pshaw            ###   ########.fr       */
+/*   Created: 2022/07/22 15:41:41 by pshaw             #+#    #+#             */
+/*   Updated: 2022/07/22 15:51:59 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//The strncmp function (string compare) compares not more than 'n' characters
-//characters that appear after a '\0' are not compared.
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	unsigned int	i;
+	char			*dest;
 
+	if (str == NULL)
+		return (NULL);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s1[i] == s2[i] & i < n - 1)
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(str) + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (str[i] != '\0')
+	{
+		dest[i] = f(i, str[i]);
 		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
+	dest[i] = '\0';
+	return (dest);
 }

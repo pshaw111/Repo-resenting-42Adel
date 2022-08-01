@@ -6,9 +6,11 @@
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 18:14:20 by pshaw             #+#    #+#             */
-/*   Updated: 2022/07/12 18:24:27 by pshaw            ###   ########.fr       */
+/*   Updated: 2022/07/29 16:38:15 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+//This function uses malloc to return a new string, which is the result of 
+//connecting(concatenating) 's1' and 's2'
 
 #include "libft.h"
 

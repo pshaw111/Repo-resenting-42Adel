@@ -6,11 +6,11 @@
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/29 19:18:14 by pshaw             #+#    #+#             */
-/*   Updated: 2022/06/30 16:02:42 by pshaw            ###   ########.fr       */
+/*   Updated: 2022/07/14 15:37:55 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*This function tests if the character is part of the
- * ASCII table, in which case it shall  return a 1, 
+ * ASCII table,on the decimal side. In which case it shall return a 1, 
  * otherwise a 0 shall be returned. */
 /*#include <stdio.h>*/
 #include "libft.h"

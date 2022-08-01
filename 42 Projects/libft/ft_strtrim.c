@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pshaw <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 15:55:06 by pshaw             #+#    #+#             */
-/*   Updated: 2022/07/29 15:59:50 by pshaw            ###   ########.fr       */
+/*   Created: 2022/07/13 14:11:06 by pshaw             #+#    #+#             */
+/*   Updated: 2022/07/13 18:57:13 by pshaw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//The strncmp function (string compare) compares not more than 'n' characters
-//characters that appear after a '\0' are not compared.
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
+	size_t	j;
 
+	if (!s1)
+		return (NULL);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] != '\0' && s1[i] == s2[i] & i < n - 1)
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
+	while (ft_strchr(set, s1[i]) && s1[i] != '\0')
+			i++;
+	j = ft_strlen((char *)s1);
+	while (ft_strchr (set, s1[j]) && j != 0)
+		j--;
+	if ((int)(j - i + 1) <= 0)
+		return (ft_calloc(1, 1));
+	return (ft_substr(s1, i, (j - i + 1)));
+}	
